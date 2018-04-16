@@ -1,0 +1,24 @@
+{
+  "name": "carnival-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express" : "*",
+    "cors" : "*",
+    "body-parser" : "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camous/carnival-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camous/carnival-server/issues"
+  },
+  "homepage": "https://github.com/camous/carnival-server#readme"
+}
