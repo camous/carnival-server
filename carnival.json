@@ -1,0 +1,124 @@
+{
+    "game" : {
+        "continents" : [{
+            "id" : "northamerica", 
+            "name" : "Nort America",
+            "points" : 5,
+            "territories" : [
+                {
+                    "id" : "alaska",
+                    "name" : "Alaska",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                },
+                {
+                    "id" : "alberta",
+                    "name" : "Alberta",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                }
+            ]
+        },{
+            "id" : "europe",
+            "points" : 5,
+            "territories" : [{
+                    "id" : "greatbritain",
+                    "name" : "Great Britain & Ireland",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                },
+                {
+                    "id" : "iceland",
+                    "name" : "Iceland",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                },
+                {
+                    "id" : "northerneurope",
+                    "name" : "Northern Europe",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                },
+                {
+                    "id" : "scandinavia",
+                    "name" : "Scandinavia",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                },
+                {
+                    "id" : "southerneurope",
+                    "name" : "Southern Europe",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                },
+                {
+                    "id" : "ukraine",
+                    "name" : "Ukraine (Eastern Europe, Russia)",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                },
+                {
+                    "id" : "westerneurope",
+                    "name" : "Western Europe",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "geometry" : {
+                        "type" : "Polygon",
+                        "coordinates" : [
+                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+    }
+}
