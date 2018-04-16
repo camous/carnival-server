@@ -9,25 +9,13 @@
                     "id" : "alaska",
                     "name" : "Alaska",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 },
                 {
                     "id" : "alberta",
                     "name" : "Alberta",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 }
             ]
         },{
@@ -37,85 +25,43 @@
                     "id" : "greatbritain",
                     "name" : "Great Britain & Ireland",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 },
                 {
                     "id" : "iceland",
                     "name" : "Iceland",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 },
                 {
                     "id" : "northerneurope",
                     "name" : "Northern Europe",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 },
                 {
                     "id" : "scandinavia",
                     "name" : "Scandinavia",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 },
                 {
                     "id" : "southerneurope",
                     "name" : "Southern Europe",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 },
                 {
                     "id" : "ukraine",
                     "name" : "Ukraine (Eastern Europe, Russia)",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 },
                 {
                     "id" : "westerneurope",
                     "name" : "Western Europe",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "geometry" : {
-                        "type" : "Polygon",
-                        "coordinates" : [
-                            [[100.0, 0.0],[100.0, 0.0],[100.0, 0.0],[100.0, 0.0]]
-                        ]
-                    }
+                    "supposedinterest" : {}
                 }
             ]
         }
