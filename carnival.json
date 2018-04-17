@@ -1,5 +1,29 @@
 {
     "game" : {
+        "rules" : {
+            "minimumresourceper" : 5
+        },
+        "teams" : [
+            {
+                "name" : "team 1",
+                "resources" : 40,
+                "members" : []
+            },{
+                "name" : "team 2",
+                "resources" : 40,
+                "members" : []
+            }
+        ],
+        "rounds" : [
+            { 
+                "name": "Discovery | Hello IT Session", 
+                "turns" : 8
+            },
+            { 
+                "name": "Re-Adjustment", 
+                "turns" : 4
+            }
+        ],
         "continents" : [{
             "id" : "northamerica", 
             "name" : "Nort America",
@@ -9,14 +33,80 @@
                     "id" : "alaska",
                     "name" : "Alaska",
                     "knowninterest" : {},
-                    "supposedinterest" : {}
+                    "supposedinterest" : {},
+                    "nodes" : {
+                        "northwestterritory": 1,
+                        "alberta" : 1
+                    }
                 },
                 {
                     "id" : "alberta",
                     "name" : "Alberta",
                     "knowninterest" : {},
-                    "supposedinterest" : {}
+                    "supposedinterest" : {},
+                    "nodes" : {
+                        "westernunitedstates" : 1,
+                        "ontario" : 1
+                    }
+                },
+                {
+                    "id" : "centralamerica",
+                    "name" : "Central America",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "nodes" : {
+                    }
+                },
+                {
+                    "id" : "easternunitedstates",
+                    "name" : "Eastern United States",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "nodes" : {
+                    }
+                },
+                {
+                    "id" : "greenland",
+                    "name" : "Greenland",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "nodes" : {
+                    }
+                },
+                {
+                    "id" : "northwestterritory",
+                    "name" : "Northwest Territory",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "nodes" : {
+                        
+                    }
+                },
+                {
+                    "id" : "ontario",
+                    "name" : "Ontario",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "nodes" : {
+                    }
+                },
+                {
+                    "id" : "quebec",
+                    "name" : "Quebec",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "nodes" : {
+                    }
+                },
+                {
+                    "id" : "westernunitedstates",
+                    "name" : "Western United States",
+                    "knowninterest" : {},
+                    "supposedinterest" : {},
+                    "nodes" : {
+                    }
                 }
+                
             ]
         },{
             "id" : "europe",
