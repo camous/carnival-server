@@ -7,9 +7,11 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express" : "*",
-    "cors" : "*",
-    "body-parser" : "*"
+    "express": "*",
+    "cors": "*",
+    "body-parser": "*",
+    "node-dijkstra": "*",
+    "lodash": "*"
   },
   "repository": {
     "type": "git",
