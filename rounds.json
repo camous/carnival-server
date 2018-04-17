@@ -1,0 +1,37 @@
+{
+    "rounds" : {
+        "objectives" : [
+            {
+                "specificfrom" : "fromterritory1",
+                "specificto" : "toterritory2",
+                "resource" : 5,
+                "achievable?" : 0.8, 
+                "relevant?" : 0.8,
+                "time" : 10
+            },
+            {
+                "specificfrom" : "fromterritory3",
+                "specificto" : "toterritory4",
+                "resource" : 5,
+                "achievable?" : 0.6,
+                "relevant?" : 0.6,
+                "time" : 10
+            }
+        ],
+        "nonobjectives" : [ "alberta", "ukraine"], // list of territories held by current player. resource won't move & won't fight
+        "stakeholders" : {
+            "alberta" : {
+                "knowninterest" : "from_config_except_if_player",
+                "supposedinterest" : 0,
+                "power" : -1.0,
+                "conflict" : 1.2
+            }
+        },
+        "risks" : {
+            "alberta" : {
+                "probability" : 0.4,
+                "resourceloss" : 3
+            }
+        }
+    }
+}
