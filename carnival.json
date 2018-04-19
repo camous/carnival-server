@@ -30,81 +30,58 @@
             "points" : 5,
             "territories" : [
                 {
-                    "id" : "alaska",
-                    "name" : "Alaska",
+                    "name" : "alaska",
+                    "display" : "Alaska",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                        "northwestterritory": 1,
-                        "alberta" : 1
-                    }
+                    "supposedinterest" : {}
                 },
                 {
-                    "id" : "alberta",
-                    "name" : "Alberta",
+                    "name" : "alberta",
+                    "display" : "Alberta",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                        "westernunitedstates" : 1,
-                        "ontario" : 1
-                    }
+                    "supposedinterest" : {}
                 },
                 {
-                    "id" : "centralamerica",
-                    "name" : "Central America",
+                    "name" : "centralamerica",
+                    "display" : "Central America",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                    }
+                    "supposedinterest" : {}
                 },
                 {
-                    "id" : "easternunitedstates",
-                    "name" : "Eastern United States",
+                    "name" : "easternunitedstates",
+                    "display" : "Eastern United States",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                    }
+                    "supposedinterest" : {}
                 },
                 {
-                    "id" : "greenland",
-                    "name" : "Greenland",
+                    "name" : "greenland",
+                    "display" : "Greenland",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                    }
+                    "supposedinterest" : {}
                 },
                 {
-                    "id" : "northwestterritory",
-                    "name" : "Northwest Territory",
+                    "name" : "northwestterritory",
+                    "display" : "Northwest Territory",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                        
-                    }
+                    "supposedinterest" : {}
                 },
                 {
-                    "id" : "ontario",
-                    "name" : "Ontario",
+                    "name" : "ontario",
+                    "display" : "Ontario",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                    }
+                    "supposedinterest" : {}
                 },
                 {
-                    "id" : "quebec",
-                    "name" : "Quebec",
+                    "name" : "quebec",
+                    "display" : "Quebec",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                    }
+                    "supposedinterest" : {}
                 },
                 {
-                    "id" : "westernunitedstates",
-                    "name" : "Western United States",
+                    "name" : "westernunitedstates",
+                    "display" : "Western United States",
                     "knowninterest" : {},
-                    "supposedinterest" : {},
-                    "nodes" : {
-                    }
+                    "supposedinterest" : {}
                 }
                 
             ]
@@ -112,49 +89,300 @@
             "id" : "europe",
             "points" : 5,
             "territories" : [{
-                    "id" : "greatbritain",
-                    "name" : "Great Britain & Ireland",
+                    "name" : "greatbritain",
+                    "display" : "Great Britain & Ireland",
                     "knowninterest" : {},
                     "supposedinterest" : {}
                 },
                 {
-                    "id" : "iceland",
-                    "name" : "Iceland",
+                    "name" : "iceland",
+                    "display" : "Iceland",
                     "knowninterest" : {},
                     "supposedinterest" : {}
                 },
                 {
-                    "id" : "northerneurope",
-                    "name" : "Northern Europe",
+                    "name" : "northerneurope",
+                    "display" : "Northern Europe",
                     "knowninterest" : {},
                     "supposedinterest" : {}
                 },
                 {
-                    "id" : "scandinavia",
-                    "name" : "Scandinavia",
+                    "name" : "scandinavia",
+                    "display" : "Scandinavia",
                     "knowninterest" : {},
                     "supposedinterest" : {}
                 },
                 {
-                    "id" : "southerneurope",
-                    "name" : "Southern Europe",
+                    "name" : "southerneurope",
+                    "display" : "Southern Europe",
                     "knowninterest" : {},
                     "supposedinterest" : {}
                 },
                 {
-                    "id" : "ukraine",
-                    "name" : "Ukraine (Eastern Europe, Russia)",
+                    "name" : "ukraine",
+                    "display" : "Ukraine (Eastern Europe, Russia)",
                     "knowninterest" : {},
                     "supposedinterest" : {}
                 },
                 {
-                    "id" : "westerneurope",
-                    "name" : "Western Europe",
+                    "name" : "westerneurope",
+                    "display" : "Western Europe",
                     "knowninterest" : {},
                     "supposedinterest" : {}
                 }
             ]
         }
     ]
+    },
+    "paths" : {
+        "alaska" : {
+            "northwestterritory" : 1,
+            "alberta" : 1,
+            "kamchatka" :1
+        },
+        "alberta" : {
+            "alaska" : 1,
+            "northwestterritory" : 1,
+            "ontario" :1,
+            "westernunitedstates" : 1
+        },
+        "centralamerica" : {
+            "westernunitedstates" :1,
+            "easternunitedstates" : 1,
+            "venezuela" : 1
+        },
+        "easternunitedstates" : {
+            "ontario" : 1,
+            "quebec" : 1,
+            "westernunitedstates" : 1,
+            "centralamerica" : 1
+        },
+        "greenland" : {
+            "northwestterritory" : 1,
+            "ontario" : 1,
+            "quebec" : 1,
+            "iceland" : 1
+        },
+        "northwestterritory" : {
+            "alaska" : 1,
+            "alberta" : 1,
+            "ontario" : 1,
+            "greenland" : 1
+        },
+        "ontario" : {
+            "northwestterritory" : 1,
+            "alberta" : 1,
+            "easternunitedstates" : 1,
+            "quebec" : 1,
+            "greenland" : 1
+        },
+        "quebec" : {
+            "ontario" : 1,
+            "easternunitedstates" : 1,
+            "greenland" : 1
+        },
+        "westernunitedstates" : {
+            "centralamerica" : 1,
+            "alberta" : 1,
+            "ontario" : 1,
+            "easternunitedstates" : 1
+        },
+        "argentina" : {
+            "peru" : 1,
+            "brazil" : 1
+        },
+        "brazil" : {
+            "venezuela" : 1,
+            "peru" : 1,
+            "argentina" : 1,
+            "northafrica" : 1
+        },
+        "peru" : {
+            "venezuela" : 1,
+            "brazil" : 1,
+            "argentina" : 1
+        },
+        "venezuela" : {
+            "centralamerica" : 1,
+            "brazil" : 1,
+            "peru" : 1
+        },
+        "greatbritain" : {
+            "iceland" : 1,
+            "scandinavia" : 1,
+            "westerneurope" : 1,
+            "northerneurope" : 1
+        },
+        "iceland" : {
+            "greenland" : 1,
+            "scandinavia" : 1,
+            "greatbritain" : 1
+        },
+        "northerneurope" : {
+            "greatbritain" : 1,
+            "scandinavia" : 1,
+            "ukraine" : 1,
+            "southerneurope" : 1,
+            "westerneurope" : 1
+        },
+        "scandinavia" : {
+            "iceland" : 1,
+            "greatbritain" : 1,
+            "northerneurope" : 1,
+            "ukraine" : 1
+
+        },
+        "southerneurope" : {
+            "westerneurope" : 1,
+            "northerneurope" : 1,
+            "ukraine" : 1,
+            "middleeast" : 1,
+            "egypt" : 1,
+            "northafrica" : 1
+        },
+        "ukraine" : {
+            "scandinavia" : 1,
+            "northerneurope" : 1,
+            "southerneurope" : 1,
+            "middleeast" : 1,
+            "afghanistan" : 1,
+            "ural" : 1
+        },
+        "westerneurope" : {
+            "greatbritain" : 1,
+            "northerneurope" : 1,
+            "southerneurope" : 1,
+            "northafrica" : 1
+        },
+        "congo" : {
+            "northafrica" : 1,
+            "eastafrica" : 1,
+            "southafrica" : 1
+        },
+        "eastafrica" : {
+            "egypt" : 1,
+            "northafrica" : 1,
+            "congo" : 1,
+            "southafrica" : 1,
+            "madagascar" : 1,
+            "middleeast" : 1
+        },
+        "egypt" : {
+            "southerneurope" : 1,
+            "northafrica" : 1,
+            "middleeast" : 1,
+            "eastafrica" : 1
+        },
+        "madagascar" : {
+            "eastafrica" : 1,
+            "southafrica" : 1
+        },
+        "northafrica" : {
+            "brazil" : 1,
+            "westerneurope" : 1,
+            "southerneurope" : 1,
+            "egypt" : 1,
+            "eastafrica" : 1,
+            "congo" : 1
+        },
+        "southafrica" : {
+            "madagascar" : 1,
+            "congo" : 1,
+            "eastafrica" : 1
+        },
+        "afghanistan" : {
+            "ukraine" : 1,
+            "middleeast" : 1,
+            "india" : 1,
+            "ural" : 1,
+            "china" : 1
+        },
+        "china" : {
+            "afghanistan" : 1,
+            "india" : 1,
+            "siam" : 1,
+            "mongolia" : 1,
+            "siberia" : 1,
+            "ural" : 1
+        },
+        "india" : {
+            "middleeast" : 1,
+            "afghanistan" : 1,
+            "china" : 1,
+            "siam" : 1
+        },
+        "irkutsk" : {
+            "siberia" : 1,
+            "yakutsk" : 1,
+            "kamchatka" : 1,
+            "mongolia" : 1
+        },
+        "japan" : {
+            "kamchatka" : 1,
+            "mongolia" : 1
+        },
+        "kamchatka" : {
+            "alaska" : 1,
+            "yakutsk" : 1,
+            "irkutsk" : 1,
+            "mongolia" : 1,
+            "japan" : 1
+        },
+        "middleeast" : {
+            "egypt" : 1,
+            "eastafrica" : 1,
+            "india" : 1,
+            "afghanistan" : 1,
+            "ukraine" : 1,
+            "southerneurope" : 1
+        },
+        "mongolia" : {
+            "irkutsk" : 1,
+            "japan" : 1,
+            "china" : 1,
+            "siberia" : 1
+        },
+        "siam" : {
+            "indonesia" : 1,
+            "india" : 1,
+            "china" : 1
+        },
+        "siberia" : {
+            "ural" : 1,
+            "china" : 1,
+            "mongolia" : 1,
+            "irkutsk" : 1,
+            "yakutsk" : 1
+        },
+        "ural" : {
+            "ukraine" : 1,
+            "afghanistan" : 1,
+            "china" : 1,
+            "siberia" : 1
+        },
+        "yakutsk" : {
+            "siberia" : 1,
+            "irkutsk" : 1,
+            "kamchatka" : 1
+        },
+        "easternaustralia" : {
+            "newguinea" : 1,
+            "westernaustralia" : 1
+        },
+        "indonesia" : {
+            "siam" : 1,
+            "newguinea" : 1,
+            "westernaustralia" : 1
+        },
+        "newguinea" : {
+            "indonesia" : 1,
+            "easternaustralia" : 1,
+            "westernaustralia" : 1
+        },
+        "westernaustralia" : {
+            "easternaustralia" : 1,
+            "indonesia" : 1,
+            "newguinea" : 1
+        }
     }
 }
