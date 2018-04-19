@@ -22,28 +22,31 @@ var carnival = JSON.parse(fs.readFileSync('carnival.json', 'utf8'));
 var risknodes = new Graph();
 
 const route = new Graph();
+var paths = {};
 
-// var pouet = _.map(carnival.game.continents, (v1,v2) => {
+for(var territory in carnival.paths){
+    if(paths[territory] === undefined){
+        paths[territory] = carnival.paths[territory];
+    } else {
+        paths[territory] = _.merge(paths[territory], carnival.paths[territory]);
+    }
+    //route.addNode(territory, carnival.paths[territory]);
 
-// });
-
-// var paths = _.groupBy(_.flatMap(_.flatMap(carnival.game.continents,'territories'),'nodes'), (key,value) => {
-//     console.log(key);
-//     return true;
-// });
-
-var territories = _.flatMap(carnival.game.continents,'territories');
-for(var id in territories){
-    var territory = territories[id];
-    for(var id2 in territory.nodes){
-        var pathvalue = territory.nodes[id2];
-        var refnode = {}, refnodeback = {};
-        refnode[id2] = pathvalue;
-        refnodeback[territory.id] = pathvalue;
-        route.addNode(territory.id, refnode );
-        route.addNode( id2, refnodeback );
+    var references = _.pickBy(carnival.paths, territory);
+    for(var id in references){
+        var reference = references[id];
+        if(paths[id] === undefined){
+            paths[id] = {};
+        }
+        paths[id][territory] = reference[territory];
     }
 }
+
+for(var territory in paths){
+    route.addNode(territory, paths[territory]);
+}
+
+console.log(route.path('alaska','easternunitedstate'));
 
 var port = process.env.PORT || 3000;
 http.createServer(app).listen(port);
