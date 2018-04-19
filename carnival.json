@@ -1,15 +1,17 @@
 {
     "game" : {
         "rules" : {
-            "minimumresourceper" : 5
+            "min_per_territory" : 3,
+            "max_per_territory" : 5,
+            "resources_per_team" : 40
         },
         "teams" : [
             {
-                "name" : "team 1",
+                "name" : "team1",
                 "resources" : 40,
                 "members" : []
             },{
-                "name" : "team 2",
+                "name" : "team2",
                 "resources" : 40,
                 "members" : []
             }
@@ -134,17 +136,19 @@
         }
     ]
     },
-    "paths" : {
+    "territories" : {
         "alaska" : {
             "northwestterritory" : 1,
             "alberta" : 1,
-            "kamchatka" :1
+            "kamchatka" :1,
+            "meta" : {}
         },
         "alberta" : {
             "alaska" : 1,
             "northwestterritory" : 1,
             "ontario" :1,
-            "westernunitedstates" : 1
+            "westernunitedstates" : 1,
+            "meta" : {}
         },
         "centralamerica" : {
             "westernunitedstates" :1,
