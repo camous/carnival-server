@@ -5,17 +5,17 @@
             "max_per_territory" : 5,
             "resources_per_team" : 40
         },
-        "teams" : [
-            {
-                "name" : "team1",
-                "resources" : 40,
-                "members" : []
-            },{
-                "name" : "team2",
-                "resources" : 40,
-                "members" : []
+        "teams" : {
+            "team1" : { 
+                "remaining_resource" : null
+            },
+            "team2" : {
+                "remaining_resource" : null
+            },
+            "team3" : {
+                "remaining_resource" : null
             }
-        ],
+        },
         "rounds" : [
             { 
                 "name": "Discovery | Hello IT Session", 
@@ -141,7 +141,9 @@
             "northwestterritory" : 1,
             "alberta" : 1,
             "kamchatka" :1,
-            "meta" : {}
+            "meta" : {
+                "display" : "Alaska"
+            }
         },
         "alberta" : {
             "alaska" : 1,
