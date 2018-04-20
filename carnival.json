@@ -43,6 +43,7 @@
             "ontario" :1,
             "westernunitedstates" : 1,
             "meta" : {
+                "display" : "Alberta (Western Canada)",
                 "continent" : "northamerica"
             }
         },
@@ -51,6 +52,7 @@
             "easternunitedstates" : 1,
             "venezuela" : 1,
             "meta" : {
+                "display" : "Central America",
                 "continent" : "northamerica"
             }
         },
@@ -60,6 +62,7 @@
             "westernunitedstates" : 1,
             "centralamerica" : 1,
             "meta" : {
+                "display" : "Eastern United States",
                 "continent" : "northamerica"
             }
         },
@@ -69,6 +72,7 @@
             "quebec" : 1,
             "iceland" : 1,
             "meta" : {
+                "display" : "Greenland",
                 "continent" : "northamerica"
             }
         },
@@ -78,6 +82,7 @@
             "ontario" : 1,
             "greenland" : 1,
             "meta" : {
+                "display" : "Northwest Territory",
                 "continent" : "northamerica"
             }
         },
@@ -88,6 +93,7 @@
             "quebec" : 1,
             "greenland" : 1,
             "meta" : {
+                "display" : "Ontario (Central Canada)",
                 "continent" : "northamerica"
             }
         },
@@ -96,6 +102,7 @@
             "easternunitedstates" : 1,
             "greenland" : 1,
             "meta" : {
+                "display" : "Quebec (Eastern Canada)",
                 "continent" : "northamerica"
             }
         },
@@ -105,6 +112,7 @@
             "ontario" : 1,
             "easternunitedstates" : 1,
             "meta" : {
+                "display" : "Western United States",
                 "continent" : "northamerica"
             }
         },
@@ -112,6 +120,7 @@
             "peru" : 1,
             "brazil" : 1,
             "meta" : {
+                "display" : "Argentina",
                 "continent" : "southamerica"
             }
         },
@@ -121,6 +130,7 @@
             "argentina" : 1,
             "northafrica" : 1,
             "meta" : {
+                "display" : "Brazil",
                 "continent" : "southamerica"
             }
         },
@@ -129,6 +139,7 @@
             "brazil" : 1,
             "argentina" : 1,
             "meta" : {
+                "display" : "Peru",
                 "continent" : "southamerica"
             }
         },
@@ -137,6 +148,7 @@
             "brazil" : 1,
             "peru" : 1,
             "meta" : {
+                "display" : "Venezuela",
                 "continent" : "southamerica"
             }
         },
@@ -146,6 +158,7 @@
             "westerneurope" : 1,
             "northerneurope" : 1,
             "meta" : {
+                "display" : "Great Britain (Great Britain & Ireland)",
                 "continent" : "europe"
             }
         },
@@ -154,6 +167,7 @@
             "scandinavia" : 1,
             "greatbritain" : 1,
             "meta" : {
+                "display" : "Iceland",
                 "continent" : "europe"
             }
         },
@@ -164,6 +178,7 @@
             "southerneurope" : 1,
             "westerneurope" : 1,
             "meta" : {
+                "display" : "Northern Europe",
                 "continent" : "europe"
             }
         },
@@ -173,6 +188,7 @@
             "northerneurope" : 1,
             "ukraine" : 1,
             "meta" : {
+                "display" : "Scandinavia",
                 "continent" : "europe"
             }
 
@@ -185,6 +201,7 @@
             "egypt" : 1,
             "northafrica" : 1,
             "meta" : {
+                "display" : "Southern Europe",
                 "continent" : "europe"
             }
         },
@@ -196,6 +213,7 @@
             "afghanistan" : 1,
             "ural" : 1,
             "meta" : {
+                "display" : "Ukraine (Eastern Europe, Russia)",
                 "continent" : "europe"
             }
         },
@@ -205,6 +223,7 @@
             "southerneurope" : 1,
             "northafrica" : 1,
             "meta" : {
+                "display" : "Western Europe",
                 "continent" : "europe"
             }
         },
@@ -213,6 +232,7 @@
             "eastafrica" : 1,
             "southafrica" : 1,
             "meta" : {
+                "display" : "Congo (Central Africa)",
                 "continent" : "africa"
             }
         },
@@ -224,6 +244,7 @@
             "madagascar" : 1,
             "middleeast" : 1,
             "meta" : {
+                "display" : "East Africa",
                 "continent" : "africa"
             }
         },
@@ -233,12 +254,17 @@
             "middleeast" : 1,
             "eastafrica" : 1,
             "meta" : {
+                "display" : "Egypt",
                 "continent" : "africa"
             }
         },
         "madagascar" : {
             "eastafrica" : 1,
-            "southafrica" : 1
+            "southafrica" : 1,
+            "meta" : {
+                "display" : "Madagascar",
+                "continent" : "africa"
+            }
         },
         "northafrica" : {
             "brazil" : 1,
@@ -248,6 +274,7 @@
             "eastafrica" : 1,
             "congo" : 1,
             "meta" : {
+                "display" : "North Africa",
                 "continent" : "africa"
             }
         },
@@ -256,6 +283,7 @@
             "congo" : 1,
             "eastafrica" : 1,
             "meta" : {
+                "display" : "South Africa",
                 "continent" : "africa"
             }
         },
@@ -266,6 +294,7 @@
             "ural" : 1,
             "china" : 1,
             "meta" : {
+                "display" : "Afghanistan",
                 "continent" : "asia"
             }
         },
@@ -277,6 +306,7 @@
             "siberia" : 1,
             "ural" : 1,
             "meta" : {
+                "display" : "China",
                 "continent" : "asia"
             }
         },
@@ -286,6 +316,7 @@
             "china" : 1,
             "siam" : 1,
             "meta" : {
+                "display" : "India",
                 "continent" : "asia"
             }
         },
@@ -295,6 +326,7 @@
             "kamchatka" : 1,
             "mongolia" : 1,
             "meta" : {
+                "display" : "Irkutsk",
                 "continent" : "asia"
             }
         },
@@ -302,6 +334,7 @@
             "kamchatka" : 1,
             "mongolia" : 1,
             "meta" : {
+                "display" : "Japan",
                 "continent" : "asia"
             }
         },
@@ -312,6 +345,7 @@
             "mongolia" : 1,
             "japan" : 1,
             "meta" : {
+                "display" : "Kamchatka",
                 "continent" : "asia"
             }
         },
@@ -323,6 +357,7 @@
             "ukraine" : 1,
             "southerneurope" : 1,
             "meta" : {
+                "display" : "Middle East",
                 "continent" : "asia"
             }
         },
@@ -332,6 +367,7 @@
             "china" : 1,
             "siberia" : 1,
             "meta" : {
+                "display" : "Mongolia",
                 "continent" : "asia"
             }
         },
@@ -340,6 +376,7 @@
             "india" : 1,
             "china" : 1,
             "meta" : {
+                "display" : "Siam (Southeast Asia)",
                 "continent" : "asia"
             }
         },
@@ -350,6 +387,7 @@
             "irkutsk" : 1,
             "yakutsk" : 1,
             "meta" : {
+                "display" : "Siberia",
                 "continent" : "asia"
             }
         },
@@ -359,6 +397,7 @@
             "china" : 1,
             "siberia" : 1,
             "meta" : {
+                "display" : "Ural",
                 "continent" : "asia"
             }
         },
@@ -367,6 +406,7 @@
             "irkutsk" : 1,
             "kamchatka" : 1,
             "meta" : {
+                "display" : "Yakutsk",
                 "continent" : "asia"
             }
         },
@@ -374,6 +414,7 @@
             "newguinea" : 1,
             "westernaustralia" : 1,
             "meta" : {
+                "display" : "Eastern Australia",
                 "continent" : "australia"
             }
         },
@@ -382,6 +423,7 @@
             "newguinea" : 1,
             "westernaustralia" : 1,
             "meta" : {
+                "display" : "Indonesia",
                 "continent" : "australia"
             }
         },
@@ -390,6 +432,7 @@
             "easternaustralia" : 1,
             "westernaustralia" : 1,
             "meta" : {
+                "display" : "New Guinea",
                 "continent" : "australia"
             }
         },
@@ -398,6 +441,7 @@
             "indonesia" : 1,
             "newguinea" : 1,
             "meta" : {
+                "display" : "Western Australia",
                 "continent" : "australia"
             }
         }
