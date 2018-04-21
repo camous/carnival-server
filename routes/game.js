@@ -5,15 +5,14 @@ var fs = require('fs');
 
 const game = require('../modules/game');
 
-app.post('/reset', function (req, res, next){
+app.post('/reset', function (req, res){
     var carnival = game.reset();
     req.app.set('carnival', carnival);
 
     res.status(200).send('ok');
-    next();
 });
 
-app.post('/resume/:session/:snapshot', function (req, res, next){
+app.post('/resume/:session/:snapshot', function (req, res){
     var session = req.params.session;
     var snapshot = req.params.snapshot;
 
@@ -24,8 +23,14 @@ app.post('/resume/:session/:snapshot', function (req, res, next){
         req.app.set('carnival', carnival);
         res.status(200).send('session #' + session + ' snapshot #' + snapshot + ' loaded');
     }
+});
 
-    next();
+app.get('/snapshots', function (req, res){
+    res.status(200).send(game.listSnapshots());
+});
+
+app.get('/session', function (req, res){
+    res.status(200).send({ session : game.getSessionName() });
 });
 
 

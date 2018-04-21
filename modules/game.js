@@ -35,7 +35,23 @@ function resume(session, snapshot){
     }
 }
 
+function listSnapshots(){
+    var folder = basefolder + '/' + session;
+    
+    if(!fs.existsSync(folder)){
+        return null;
+    } else {
+        return fs.readdirSync(folder);
+    }
+}
+
+function getSessionName(){
+    return session;
+}
+
 module.exports.reset = reset;
 module.exports.newSession = newSession;
 module.exports.save = save;
 module.exports.resume = resume;
+module.exports.listSnapshots = listSnapshots;
+module.exports.getSessionName = getSessionName;
