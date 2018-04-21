@@ -25,6 +25,7 @@ app.set('carnival', carnival);
 rules.initializeCarnival(carnival);
 app.set('routes',routes.initializeCarnivalRoutes(carnival));
 
+app.use('/game', require('./routes/game'));
 app.use('/routes', require('./routes/route'));
 app.use('/teams', require('./routes/team'));
 app.use('/territories', require('./routes/territory'));
