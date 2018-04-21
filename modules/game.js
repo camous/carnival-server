@@ -4,6 +4,10 @@ var fs = require('fs');
 var session;
 var basefolder = 'game';
 
+function getRoundNumber(carnival){
+    return carnival.game.state.round;
+}
+
 function reset(carnival){
     return JSON.parse(fs.readFileSync('carnival.json', 'utf8'));
 }
@@ -49,6 +53,7 @@ function getSessionName(){
     return session;
 }
 
+module.exports.getRoundNumber = getRoundNumber;
 module.exports.reset = reset;
 module.exports.newSession = newSession;
 module.exports.save = save;

@@ -2,6 +2,7 @@ const express = require('express');
 const app = express.Router();
 var _ = require('lodash');
 const objectives = require('../modules/objective');
+const game = require('../modules/game');
 
 app.get('/:roundid/:team', function(req,res){
     var carnival = req.app.get('carnival');
@@ -17,18 +18,21 @@ app.put('/:roundid/:team/:objectiveid?', function (req, res, next){
     var roundid = parseInt(req.params.roundid);
     var team = req.params.team;
 
-    var teamobjectives = carnival.game.rounds[roundid-1].objectives[team];
+    if(roundid !== game.getRoundNumber(carnival)){
+        res.status(403).send('incorrect round');
+    } else {
+        var teamobjectives = carnival.game.rounds[roundid-1].objectives[team];
+        // it's a new objective
+        if(objectiveid === -1){
+            teamobjectives.push(req.body);
+            objectiveid = teamobjectives.length-1;
+        }else{
+            teamobjectives[objectiveid] = req.body;
+        }
 
-    // it's a new objective
-    if(objectiveid === -1){
-        teamobjectives.push(req.body);
-        objectiveid = teamobjectives.length-1;
-    }else{
-        teamobjectives[objectiveid] = req.body;
+        res.status(200).send({objectiveid : objectiveid, objective : teamobjectives[objectiveid]});
+        next();
     }
-
-    res.status(200).send({objectiveid : objectiveid, objective : teamobjectives[objectiveid]});
-    next();
 });
 
 app.get('/:roundid/:team/cost', function (req,res){
@@ -48,10 +52,14 @@ app.delete('/:roundid/:team/:objectiveid', function (req, res, next){
     var objectiveid = parseInt(req.params.objectiveid);
     var team = req.params.team;
 
-    objectives.deleteObjective(carnival, team, roundid, objectiveid)
+    if(roundid !== game.getRoundNumber(carnival)){
+        res.status(403).send('incorrect round');
+    } else {
+        objectives.deleteObjective(carnival, team, roundid, objectiveid)
 
-    res.status(200).send(carnival.game.rounds[roundid-1].objectives[team]) ;
-    next();
+        res.status(200).send(carnival.game.rounds[roundid-1].objectives[team]) ;
+        next();
+    }
 });
 
 module.exports = app;
