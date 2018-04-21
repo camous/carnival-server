@@ -26,6 +26,16 @@ function save(carnival){
     });
 }
 
+function resume(session, snapshot){
+    var folder = basefolder + '/' + session + '/' + snapshot + '.json'; 
+    if(!fs.existsSync(folder)){
+        return null;
+    } else {
+        return {'snapshot' : snapshot, 'carnival' : JSON.parse(fs.readFileSync(folder, 'utf8'))};
+    }
+}
+
 module.exports.reset = reset;
 module.exports.newSession = newSession;
 module.exports.save = save;
+module.exports.resume = resume;

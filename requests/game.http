@@ -1,1 +1,3 @@
 POST http://localhost:3000/game/reset
+###
+POST http://localhost:3000/game/resume/1524347848993/1524347882609
