@@ -17,7 +17,7 @@ function dispatchTeamResources(carnival, team){
     
     do {
         if(remaining_resources === 0)
-            continue;
+            break;
     
         var rndres = Math.floor(Math.random() * max-min+1) + min;
         remaining_resources-=rndres;
