@@ -28,6 +28,7 @@ app.set('routes',routes.initializeCarnivalRoutes(carnival));
 app.use('/routes', require('./routes/route'));
 app.use('/teams', require('./routes/team'));
 app.use('/territories', require('./routes/territory'));
+app.use('/objectives', require('./routes/objective'));
 
 var port = process.env.PORT || 3000;
 http.createServer(app).listen(port);

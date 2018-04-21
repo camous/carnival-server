@@ -1,9 +1,14 @@
 {
     "game" : {
+        "state" : {
+            "round" : 0
+        },
         "rules" : {
             "min_per_territory" : 3,
             "max_per_territory" : 5,
-            "resources_per_team" : 40
+            "resources_per_team" : 40,
+            "cost_per_objective" : 5,
+            "gain_per_nonobjective" : 10
         },
         "teams" : {
             "team1" : { 
@@ -17,13 +22,28 @@
             }
         },
         "rounds" : [
-            { 
+            {
                 "name": "Discovery | Hello IT Session", 
-                "turns" : 8
+                "turns" : 8,
+                "objective_points" : 50,
+                "objectives" : {
+                    "team1" : [{
+                            "from" : "",
+                            "to" : "",
+                            "resource" : 2,
+                            "achievable" : "smile",
+                            "realistic" : "smile",
+                            "time" : 5
+                        }
+                    ],
+                    "team2" : {},
+                    "team3" : {}
+                }
             },
             { 
                 "name": "Re-Adjustment", 
-                "turns" : 4
+                "turns" : 4,
+                "objective_points" : 40
             }
         ]
     },
