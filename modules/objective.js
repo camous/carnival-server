@@ -26,7 +26,9 @@ function getAllObjectivesCost(carnival, objectives){
 function deleteObjective(carnival, team, roundid, objectiveid){
     var teamobjectives = carnival.game.rounds[roundid-1].objectives[team];
     var deletedobject = teamobjectives[objectiveid];
-    carnival.game.rounds[roundid-1].objectives[team] = teamobjectives.splice(objectiveid,1);
+    teamobjectives.splice(objectiveid,1);
+
+    carnival.game.rounds[roundid-1].objectives[team] = teamobjectives;
 
     return deletedobject;
 }

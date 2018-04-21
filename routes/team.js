@@ -7,13 +7,14 @@ const teams = require('../modules/team');
 /**
  * initial generation of teams
  */
-app.post('/generate/:team', function (req,res){
+app.post('/generate/:team', function (req,res, next){
     var team = req.params.team;
     var carnival = req.app.get('carnival');
 
     teams.dispatchTeamResources(carnival, team);
 
     res.status(200).send(_.pickBy(carnival.territories,'meta.count'));
+    next();
 });
 
 app.get('/get/:team', function(req,res){

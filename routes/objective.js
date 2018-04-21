@@ -11,23 +11,24 @@ app.get('/:roundid/:team', function(req,res){
     res.status(200).send(carnival.game.rounds[roundid-1].objectives[team]);
 });
 
-app.put('/:roundid/:team/:objectiveid?', function (req, res){
+app.put('/:roundid/:team/:objectiveid?', function (req, res, next){
     var carnival = req.app.get('carnival');
-    var objectiveid = req.params.objectiveid;
-    var roundid = req.params.roundid;
+    var objectiveid = parseInt(req.params.objectiveid || -1);
+    var roundid = parseInt(req.params.roundid);
     var team = req.params.team;
 
     var teamobjectives = carnival.game.rounds[roundid-1].objectives[team];
 
     // it's a new objective
-    if(objectiveid === undefined){
+    if(objectiveid === -1){
         teamobjectives.push(req.body);
         objectiveid = teamobjectives.length-1;
     }else{
         teamobjectives[objectiveid] = req.body;
     }
 
-    res.status(200).send(teamobjectives[objectiveid]);
+    res.status(200).send({objectiveid : objectiveid, objective : teamobjectives[objectiveid]});
+    next();
 });
 
 app.get('/:roundid/:team/cost', function (req,res){
@@ -41,7 +42,7 @@ app.get('/:roundid/:team/cost', function (req,res){
     res.status(200).send({ objectivescount : teamobjectives.length, cost : cost});
 });
 
-app.delete('/:roundid/:team/:objectiveid', function (req, res){
+app.delete('/:roundid/:team/:objectiveid', function (req, res, next){
     var carnival = req.app.get('carnival');
     var roundid = parseInt(req.params.roundid);
     var objectiveid = parseInt(req.params.objectiveid);
@@ -50,6 +51,7 @@ app.delete('/:roundid/:team/:objectiveid', function (req, res){
     objectives.deleteObjective(carnival, team, roundid, objectiveid)
 
     res.status(200).send(carnival.game.rounds[roundid-1].objectives[team]) ;
+    next();
 });
 
 module.exports = app;
