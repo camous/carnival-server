@@ -14,6 +14,11 @@ var app = express();
 app.use(cors());
 app.use( bodyParser.json());
 
+app.use(function(req,res,next){
+    console.log(req.originalUrl);
+    next();
+});
+
 var carnival = JSON.parse(fs.readFileSync('carnival.json', 'utf8'));
 app.set('carnival', carnival);
 
