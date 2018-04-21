@@ -8,16 +8,19 @@
             "max_per_territory" : 5,
             "resources_per_team" : 40,
             "cost_per_objective" : 5,
-            "gain_per_nonobjective" : 10
+            "cost_per_nonobjective" : -10
         },
         "teams" : {
             "team1" : { 
+                "icon" : "chess-bishop",
                 "remaining_resource" : null
             },
             "team2" : {
+                "icon" : "chess-knight",
                 "remaining_resource" : null
             },
             "team3" : {
+                "icon" : "chess-rook",
                 "remaining_resource" : null
             }
         },
@@ -34,9 +37,34 @@
                             "achievable" : "smile",
                             "realistic" : "smile",
                             "time" : 5
+                        },
+                        {
+                            "from" : "alaska",
+                            "to" : "alberta",
+                            "resource" : 4,
+                            "achievable" : "meh",
+                            "realistic" : "smile",
+                            "time" : 3
                         }
                     ],
-                    "team2" : {},
+                    "team2" : [
+                        {
+                            "from" : "alaska",
+                            "to" : "alberta",
+                            "resource" : 2,
+                            "achievable" : "smile",
+                            "realistic" : "frown",
+                            "time" : 5
+                        },
+                        {
+                            "from" : "siam",
+                            "to" : "alaska",
+                            "resource" : 2,
+                            "achievable" : "meh",
+                            "realistic" : "smile",
+                            "time" : 5
+                        }
+                    ],
                     "team3" : {}
                 }
             },
