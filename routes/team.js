@@ -16,4 +16,17 @@ app.post('/generate/:team', function (req,res){
     res.status(200).send(_.pickBy(carnival.territories,'meta.count'));
 });
 
+app.get('/get/:team', function(req,res){
+    var team = req.params.team;
+    var carnival = req.app.get('carnival');
+
+    var teamterritories = _.mapValues(_.pickBy(carnival.territories,(value, key) =>{
+       return value.meta.team !== undefined && value.meta.team === team;
+    }), (value,key)=>{
+        return value.meta;
+    });
+
+    res.status(200).send(teamterritories);
+});
+
 module.exports = app;

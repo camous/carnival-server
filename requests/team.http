@@ -5,3 +5,5 @@ content-type: application/json
     "timestamp" : "2018-04-19 00:00:00",
     "members" : ["player 1","player 2","player 3"]
 }
+###
+GET  http://localhost:3000/teams/get/team1
