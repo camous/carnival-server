@@ -30,4 +30,14 @@ app.get('/get/:team', function(req,res){
     res.status(200).send(teamterritories);
 });
 
+app.get('/icons', function (req,res){
+    var carnival = req.app.get('carnival');
+
+    var icons = _.mapValues(carnival.game.teams, (value,key) => {
+        return value.icon;
+    });
+
+    res.status(200).send(icons);
+});
+
 module.exports = app;

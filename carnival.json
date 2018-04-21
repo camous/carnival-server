@@ -12,15 +12,15 @@
         },
         "teams" : {
             "team1" : { 
-                "icon" : "chess-bishop",
+                "icon" : "fas fa-chess-bishop",
                 "remaining_resource" : null
             },
             "team2" : {
-                "icon" : "chess-knight",
+                "icon" : "fas fa-chess-knight",
                 "remaining_resource" : null
             },
             "team3" : {
-                "icon" : "chess-rook",
+                "icon" : "fas fa-chess-rook",
                 "remaining_resource" : null
             }
         },
@@ -59,6 +59,14 @@
                         {
                             "from" : "siam",
                             "to" : "alaska",
+                            "resource" : 2,
+                            "achievable" : "meh",
+                            "realistic" : "smile",
+                            "time" : 5
+                        },
+                        {
+                            "from" : "japan",
+                            "to" : "iceland",
                             "resource" : 2,
                             "achievable" : "meh",
                             "realistic" : "smile",
