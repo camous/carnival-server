@@ -1,4 +1,4 @@
-POST http://localhost:3000/teams/generate/team2
+POST http://localhost:3000/teams/generate/team3
 content-type: application/json
 
 {

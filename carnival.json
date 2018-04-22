@@ -1,7 +1,7 @@
 {
     "game" : {
         "state" : {
-            "round" : 0
+            "round" : 1
         },
         "rules" : {
             "min_per_territory" : 3,
