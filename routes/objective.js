@@ -62,4 +62,39 @@ app.delete('/:roundid/:team/:objectiveid', function (req, res, next){
     }
 });
 
+app.put('/move', function (req, res, next){
+    var carnival = req.app.get('carnival');
+    var team = carnival.game.state.team;
+    var turnid = carnival.game.state.turns[team];
+    var objectiveid = carnival.game.state.objectives[team];
+
+    // where are we ?
+
+    var objective = carnival.game.moves[team][objectiveid];
+    if(objective === undefined){
+        res.status(403).send('no objective for ' + team);
+    }
+    else {
+        carnival.game.state.objectives[team]  = (carnival.game.state.objectives[team] +1 )%carnival.game.moves[team].length;
+        
+
+        var move = { from : objective[turnid+1],
+            to : objective[turnid+2]};
+
+        var fight = objectives.move(carnival, team, objective[0], move.from, move.to);
+
+        carnival.game.state.turns[team] += 1;
+
+        res.status(200).send({team : team, turn: turnid,objective : carnival.game.moves[team][objectiveid], move : move, fight : fight});
+    }
+    if(team==="team1")
+        carnival.game.state.team = "team2";
+    else if (team === "team2")
+        carnival.game.state.team = "team3";
+    else
+        carnival.game.state.team = "team1";
+
+    next();
+});
+
 module.exports = app;

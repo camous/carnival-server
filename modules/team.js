@@ -5,7 +5,7 @@ function getAvailableTerritory(territories) {
     var territory = null;
     do {
         territory = territorieslist[Math.floor(Math.random() * territorieslist.length)];
-    }while(territories[territory].meta !== undefined && territories[territory].meta.team !== undefined);
+    }while(territories[territory].meta !== undefined && territories[territory].meta.count !== undefined);
 
     return territory;
 }
@@ -19,7 +19,7 @@ function dispatchTeamResources(carnival, team){
         if(remaining_resources === 0)
             break;
     
-        var rndres = Math.floor(Math.random() * max-min+1) + min;
+        var rndres = Math.floor(Math.random() * (max-min+1)) + min;
         remaining_resources-=rndres;
     
         if(remaining_resources<=0) {
@@ -28,7 +28,11 @@ function dispatchTeamResources(carnival, team){
         }
     
         var territory = getAvailableTerritory(carnival.territories);
-        _.merge(carnival.territories[territory], { 'meta' :  {'team' : team,'count' : rndres }});
+
+        var merge = {'meta': {'count' : {}}};
+        merge.meta.count[team] = rndres;
+
+        _.merge(carnival.territories[territory], merge);
         console.log(team + '\t' + territory + '\t' + rndres + '/' + remaining_resources );
     }while(remaining_resources>0);
     

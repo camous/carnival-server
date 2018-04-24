@@ -1,27 +1,86 @@
 {
     "game" : {
         "state" : {
+            "team" : "team1",
+            "turns" : {
+                "team1" : 0,
+                "team2" : 0,
+                "team3" : 0
+            },
+            "objectives" : {
+                "team1" : 0,
+                "team2" : 0,
+                "team3" : 0
+            },
             "round" : 1
         },
         "rules" : {
-            "min_per_territory" : 3,
-            "max_per_territory" : 5,
+            "min_per_territory" : 4,
+            "max_per_territory" : 7,
             "resources_per_team" : 40,
             "cost_per_objective" : 5,
             "cost_per_nonobjective" : -10
         },
+        "moves" : {
+
+            "team1" : [
+            ],
+            "team2" : [
+            ],
+            "team3" : [
+            ]
+        },
         "teams" : {
             "team1" : { 
                 "icon" : "fas fa-chess-bishop",
-                "remaining_resource" : null
+                "remaining_resource" : null,
+                "nonobjectives" : ["eastaustralia", "china"],
+                "stakeholders" : {
+                    "team2" : {
+                        "type" : "participative",
+                        "power" : 2,
+                        "conflict" : 2
+                    },
+                    "team3" : {
+                        "type" : "repressive",
+                        "power" : 1,
+                        "conflict" :3
+                    }
+                }
             },
             "team2" : {
                 "icon" : "fas fa-chess-knight",
-                "remaining_resource" : null
+                "remaining_resource" : null,
+                "nonobjectives" : ["ontario"],
+                "stakeholders" : {
+                    "team1" : {
+                        "type" : "repressive",
+                        "power" : 2,
+                        "conflict" : 2
+                    },
+                    "team3" : {
+                        "type" : "repressive",
+                        "power" : 1,
+                        "conflict" :3
+                    }
+                }
             },
             "team3" : {
                 "icon" : "fas fa-chess-rook",
-                "remaining_resource" : null
+                "remaining_resource" : null,
+                "nonobjectives" : ["indonesia"],
+                "stakeholders" : {
+                    "team1" : {
+                        "type" : "discursive",
+                        "power" : 2,
+                        "conflict" : 2
+                    },
+                    "team2" : {
+                        "type" : "repressive",
+                        "power" : 1,
+                        "conflict" :3
+                    }
+                }
             }
         },
         "rounds" : [
@@ -90,7 +149,9 @@
             "kamchatka" :1,
             "meta" : {
                 "display" : "Alaska",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 119,
+                "left" : 63
             }
         },
         "alberta" : {
@@ -100,7 +161,9 @@
             "westernunitedstates" : 1,
             "meta" : {
                 "display" : "Alberta (Western Canada)",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 185,
+                "left" : 175
             }
         },
         "centralamerica" : {
@@ -109,7 +172,9 @@
             "venezuela" : 1,
             "meta" : {
                 "display" : "Central America",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 359,
+                "left" : 221
             }
         },
         "easternunitedstates" : {
@@ -119,7 +184,9 @@
             "centralamerica" : 1,
             "meta" : {
                 "display" : "Eastern United States",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 295,
+                "left" : 295
             }
         },
         "greenland" : {
@@ -129,7 +196,9 @@
             "iceland" : 1,
             "meta" : {
                 "display" : "Greenland",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 52,
+                "left" : 435
             }
         },
         "northwestterritory" : {
@@ -139,7 +208,9 @@
             "greenland" : 1,
             "meta" : {
                 "display" : "Northwest Territory",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 90,
+                "left" : 176
             }
         },
         "ontario" : {
@@ -150,7 +221,9 @@
             "greenland" : 1,
             "meta" : {
                 "display" : "Ontario (Central Canada)",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 192,
+                "left" : 263
             }
         },
         "quebec" : {
@@ -159,7 +232,9 @@
             "greenland" : 1,
             "meta" : {
                 "display" : "Quebec (Eastern Canada)",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 189,
+                "left" : 364
             }
         },
         "westernunitedstates" : {
@@ -169,7 +244,9 @@
             "easternunitedstates" : 1,
             "meta" : {
                 "display" : "Western United States",
-                "continent" : "northamerica"
+                "continent" : "northamerica",
+                "top" : 251,
+                "left" : 147
             }
         },
         "argentina" : {
@@ -177,7 +254,9 @@
             "brazil" : 1,
             "meta" : {
                 "display" : "Argentina",
-                "continent" : "southamerica"
+                "continent" : "southamerica",
+                "top" : 661,
+                "left" : 282
             }
         },
         "brazil" : {
@@ -187,7 +266,9 @@
             "northafrica" : 1,
             "meta" : {
                 "display" : "Brazil",
-                "continent" : "southamerica"
+                "continent" : "southamerica",
+                "top" : 503,
+                "left" : 348
             }
         },
         "peru" : {
@@ -196,7 +277,9 @@
             "argentina" : 1,
             "meta" : {
                 "display" : "Peru",
-                "continent" : "southamerica"
+                "continent" : "southamerica",
+                "top" : 508,
+                "left" : 167
             }
         },
         "venezuela" : {
@@ -205,7 +288,9 @@
             "peru" : 1,
             "meta" : {
                 "display" : "Venezuela",
-                "continent" : "southamerica"
+                "continent" : "southamerica",
+                "top" : 418,
+                "left" : 247
             }
         },
         "greatbritain" : {
@@ -215,7 +300,9 @@
             "northerneurope" : 1,
             "meta" : {
                 "display" : "Great Britain (Great Britain & Ireland)",
-                "continent" : "europe"
+                "continent" : "europe",
+                "top" : 214,
+                "left" : 503
             }
         },
         "iceland" : {
@@ -224,7 +311,9 @@
             "greatbritain" : 1,
             "meta" : {
                 "display" : "Iceland",
-                "continent" : "europe"
+                "continent" : "europe",
+                "top" : 148,
+                "left" : 492
             }
         },
         "northerneurope" : {
@@ -235,7 +324,9 @@
             "westerneurope" : 1,
             "meta" : {
                 "display" : "Northern Europe",
-                "continent" : "europe"
+                "continent" : "europe",
+                "top" : 228,
+                "left" : 566
             }
         },
         "scandinavia" : {
@@ -245,7 +336,9 @@
             "ukraine" : 1,
             "meta" : {
                 "display" : "Scandinavia",
-                "continent" : "europe"
+                "continent" : "europe",
+                "top" : 121,
+                "left" : 575
             }
 
         },
@@ -258,7 +351,9 @@
             "northafrica" : 1,
             "meta" : {
                 "display" : "Southern Europe",
-                "continent" : "europe"
+                "continent" : "europe",
+                "top" : 286,
+                "left" : 589
             }
         },
         "ukraine" : {
@@ -270,7 +365,9 @@
             "ural" : 1,
             "meta" : {
                 "display" : "Ukraine (Eastern Europe, Russia)",
-                "continent" : "europe"
+                "continent" : "europe",
+                "top" : 166,
+                "left" : 661
             }
         },
         "westerneurope" : {
@@ -280,7 +377,9 @@
             "northafrica" : 1,
             "meta" : {
                 "display" : "Western Europe",
-                "continent" : "europe"
+                "continent" : "europe",
+                "top" : 289,
+                "left" : 447
             }
         },
         "congo" : {
@@ -289,7 +388,9 @@
             "southafrica" : 1,
             "meta" : {
                 "display" : "Congo (Central Africa)",
-                "continent" : "africa"
+                "continent" : "africa",
+                "top" : 537,
+                "left" : 585
             }
         },
         "eastafrica" : {
@@ -301,7 +402,9 @@
             "middleeast" : 1,
             "meta" : {
                 "display" : "East Africa",
-                "continent" : "africa"
+                "continent" : "africa",
+                "top" : 519,
+                "left" : 678
             }
         },
         "egypt" : {
@@ -311,7 +414,9 @@
             "eastafrica" : 1,
             "meta" : {
                 "display" : "Egypt",
-                "continent" : "africa"
+                "continent" : "africa",
+                "top" : 371,
+                "left" : 607
             }
         },
         "madagascar" : {
@@ -319,7 +424,9 @@
             "southafrica" : 1,
             "meta" : {
                 "display" : "Madagascar",
-                "continent" : "africa"
+                "continent" : "africa",
+                "top" : 640,
+                "left" : 714
             }
         },
         "northafrica" : {
@@ -331,7 +438,9 @@
             "congo" : 1,
             "meta" : {
                 "display" : "North Africa",
-                "continent" : "africa"
+                "continent" : "africa",
+                "top" : 402,
+                "left" : 471
             }
         },
         "southafrica" : {
@@ -340,7 +449,9 @@
             "eastafrica" : 1,
             "meta" : {
                 "display" : "South Africa",
-                "continent" : "africa"
+                "continent" : "africa",
+                "top" : 644,
+                "left" : 559
             }
         },
         "afghanistan" : {
@@ -351,7 +462,9 @@
             "china" : 1,
             "meta" : {
                 "display" : "Afghanistan",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 253,
+                "left" : 742
             }
         },
         "china" : {
@@ -363,7 +476,9 @@
             "ural" : 1,
             "meta" : {
                 "display" : "China",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 313,
+                "left" : 884
             }
         },
         "india" : {
@@ -373,7 +488,9 @@
             "siam" : 1,
             "meta" : {
                 "display" : "India",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 383,
+                "left" : 811
             }
         },
         "irkutsk" : {
@@ -383,7 +500,9 @@
             "mongolia" : 1,
             "meta" : {
                 "display" : "Irkutsk",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 197,
+                "left" : 951
             }
         },
         "japan" : {
@@ -391,7 +510,9 @@
             "mongolia" : 1,
             "meta" : {
                 "display" : "Japan",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 268,
+                "left" : 1107
             }
         },
         "kamchatka" : {
@@ -402,7 +523,9 @@
             "japan" : 1,
             "meta" : {
                 "display" : "Kamchatka",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 136,
+                "left" : 1115
             }
         },
         "middleeast" : {
@@ -414,7 +537,9 @@
             "southerneurope" : 1,
             "meta" : {
                 "display" : "Middle East",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 361,
+                "left" : 681
             }
         },
         "mongolia" : {
@@ -424,7 +549,9 @@
             "siberia" : 1,
             "meta" : {
                 "display" : "Mongolia",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 260,
+                "left" : 972
             }
         },
         "siam" : {
@@ -433,7 +560,9 @@
             "china" : 1,
             "meta" : {
                 "display" : "Siam (Southeast Asia)",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 421,
+                "left" : 929
             }
         },
         "siberia" : {
@@ -444,7 +573,9 @@
             "yakutsk" : 1,
             "meta" : {
                 "display" : "Siberia",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 119,
+                "left" : 846
             }
         },
         "ural" : {
@@ -454,7 +585,9 @@
             "siberia" : 1,
             "meta" : {
                 "display" : "Ural",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 152,
+                "left" : 795
             }
         },
         "yakutsk" : {
@@ -463,7 +596,9 @@
             "kamchatka" : 1,
             "meta" : {
                 "display" : "Yakutsk",
-                "continent" : "asia"
+                "continent" : "asia",
+                "top" : 92,
+                "left" : 952
             }
         },
         "easternaustralia" : {
@@ -471,7 +606,9 @@
             "westernaustralia" : 1,
             "meta" : {
                 "display" : "Eastern Australia",
-                "continent" : "australia"
+                "continent" : "australia",
+                "top" : 618,
+                "left" : 1075
             }
         },
         "indonesia" : {
@@ -480,7 +617,9 @@
             "westernaustralia" : 1,
             "meta" : {
                 "display" : "Indonesia",
-                "continent" : "australia"
+                "continent" : "australia",
+                "top" : 507,
+                "left" : 926
             }
         },
         "newguinea" : {
@@ -489,7 +628,9 @@
             "westernaustralia" : 1,
             "meta" : {
                 "display" : "New Guinea",
-                "continent" : "australia"
+                "continent" : "australia",
+                "top" : 512,
+                "left" : 1108
             }
         },
         "westernaustralia" : {
@@ -498,7 +639,9 @@
             "newguinea" : 1,
             "meta" : {
                 "display" : "Western Australia",
-                "continent" : "australia"
+                "continent" : "australia",
+                "top" : 613,
+                "left" : 901
             }
         }
     }

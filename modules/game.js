@@ -53,6 +53,10 @@ function getSessionName(){
     return session;
 }
 
+function fight(carnival, team, from, to){
+
+}
+
 module.exports.getRoundNumber = getRoundNumber;
 module.exports.reset = reset;
 module.exports.newSession = newSession;

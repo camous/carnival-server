@@ -20,7 +20,7 @@ app.post('/resume/:session/:snapshot', function (req, res){
     if(carnival === null){
         res.status(500).send('can\'t locate snapshot');
     } else {
-        req.app.set('carnival', carnival);
+        req.app.set('carnival', carnival.carnival);
         res.status(200).send('session #' + session + ' snapshot #' + snapshot + ' loaded');
     }
 });

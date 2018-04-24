@@ -30,6 +30,11 @@ app.get('/get/:team', function(req,res){
     res.status(200).send(teamterritories);
 });
 
+app.get('/get', function (req, res){
+    var carnival = req.app.get('carnival');
+    res.status(200).send(carnival.territories);
+});
+
 app.get('/icons', function (req,res){
     var carnival = req.app.get('carnival');
 
@@ -38,6 +43,16 @@ app.get('/icons', function (req,res){
     });
 
     res.status(200).send(icons);
+});
+
+app.post('/:territory', function (req, res){
+    var body = req.body;
+    var territory = req.params.territory;
+    var carnival = req.app.get('carnival');
+    
+    carnival.territories[territory].meta['count'] = body;
+
+    res.status(200).send(carnival.territories[territory]);
 });
 
 module.exports = app;
